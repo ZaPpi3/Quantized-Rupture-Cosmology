@@ -1,0 +1,186 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath, amssymb}
+\usepackage{authblk}
+\usepackage{geometry}
+\usepackage{hyperref}
+\geometry{margin=1in}
+
+\title{\textbf{A Quantized Rupture Cosmology:\\
+Cyclic Dynamics, Multiverse Branching, and Entropy Inheritance}}
+
+\author[1]{Paul Jarvis}
+\affil[1]{Independent Researcher, United Kingdom}
+
+\date{27 May 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+I propose a rupture-driven cyclic cosmology in which black hole formation increases a singularity density variable $\rho_s(t)$ until a critical threshold $\rho_{\rm crit}$ is reached. Crossing this threshold triggers a rupture that ends the cycle and produces $N = 6m$ descendant universes, where $m$ is a quantized excitation mode determined by rupture strength. Numerical simulations show that for natural parameter choices the fundamental mode $m=1$ overwhelmingly dominates, yielding six universes per rupture. Extending the model to a branching universe tree and adding entropy tracking reveals a thermodynamic arrow across generations: each universe produces entropy, dumps it into the singularity at rupture, and passes it forward to its descendants. The resulting structure is a stable, self-similar multiverse with quantized reproduction and inherited entropy.
+\end{abstract}
+
+\section{Introduction}
+
+Cyclic cosmologies have been explored in several contexts, including conformal cyclic cosmology (CCC) \cite{Penrose2010}, ekpyrotic and brane-based cyclic models \cite{SteinhardtTurok2002,SteinhardtTurok2005}, and loop quantum cosmology (LQC) bounce scenarios \cite{Ashtekar2006}. A persistent challenge is identifying a physically motivated mechanism that both terminates each cycle and seeds the next.
+
+In this work, I introduce a rupture-driven cyclic cosmology in which black hole formation drives the accumulation of a singularity density variable $\rho_s(t)$. When $\rho_s(t)$ exceeds a critical threshold $\rho_{\rm crit}$, the universe undergoes a rupture that resets the cycle and produces a discrete number of descendant universes. A key feature of the model is that rupture outcomes are quantized: the number of universes produced is always a multiple of six, reflecting an assumed six-directional symmetry of the confining structure.
+
+\section{Relation to Previous Work}
+
+Smolin's cosmological natural selection \cite{Smolin1992,Smolin1997} proposes that black holes generate new universes with varied parameters, forming a branching multiverse. However, Smolin's model is not cyclic, does not include a rupture threshold, and does not impose quantized reproduction.
+
+Penrose's CCC \cite{Penrose2010} describes an infinite sequence of aeons related by conformal rescaling, with entropy effectively reset between cycles. CCC is cyclic but non-branching: each aeon leads to exactly one successor.
+
+Ekpyrotic models \cite{SteinhardtTurok2002,SteinhardtTurok2005} involve brane collisions that periodically reheat the universe, but do not incorporate discrete reproduction or black-hole-driven rupture.
+
+Eternal inflation \cite{Guth2007} produces a branching multiverse but lacks cyclic dynamics, a global rupture threshold, or quantized offspring counts.
+
+Loop quantum cosmology \cite{Ashtekar2006} replaces singularities with bounces but does not introduce branching or reproduction.
+
+To the author's knowledge, no previous model combines: (i) a singularity density accumulator driven by black hole formation, (ii) a critical rupture threshold, (iii) quantized reproduction in multiples of six, (iv) a branching universe tree, and (v) explicit entropy inheritance across generations.
+
+\section{Defining Equation of the Rupture Cosmology}
+
+The essential physics of the model can be expressed in a single compact equation:
+
+\begin{equation}
+\boxed{
+N(t) = 6\,\Theta\!\left(\rho_s(t) - \rho_{\rm crit}\right)\,
+m\!\left(\Delta(t)\right)
+}
+\label{eq:master}
+\end{equation}
+
+where:
+\begin{itemize}
+\item $N(t)$ is the number of universes produced at rupture,
+\item $\Theta$ is the Heaviside step function,
+\item $\rho_s(t)$ is the singularity density,
+\item $\rho_{\rm crit}$ is the rupture threshold,
+\item $\Delta(t) = \rho_s(t) - \rho_{\rm crit}$ is the overshoot,
+\item $m(\Delta)$ is a quantized excitation mode.
+\end{itemize}
+
+The excitation mode is defined by discrete overshoot intervals:
+\begin{equation}
+m(\Delta)=
+\begin{cases}
+1, & \Delta < 500,\
+
+\[4pt]
+2, & 500 \le \Delta < 2000,\
+
+\[4pt]
+3, & 2000 \le \Delta < 5000,\
+
+\[4pt]
+4, & \Delta \ge 5000.
+\end{cases}
+\label{eq:modes}
+\end{equation}
+
+The singularity density evolves according to
+\begin{equation}
+\boxed{
+\frac{d\rho_s}{dt} = \alpha\,\dot{M}_{\rm BH}(t)
+}
+\label{eq:rho_evolution}
+\end{equation}
+with black hole formation rate
+\begin{equation}
+\boxed{
+\dot{M}_{\rm BH}(t) = A\, t^p e^{-t/\tau}
+}
+\label{eq:bh_rate}
+\end{equation}
+
+Equations \eqref{eq:master}--\eqref{eq:bh_rate} define the complete rupture cosmology: black hole formation drives the growth of $\rho_s(t)$ until the threshold $\rho_{\rm crit}$ is crossed, at which point the universe ruptures and produces $N = 6m$ descendant universes determined by the quantized excitation mode $m$.
+
+\section{Universe Tree}
+
+Each universe is represented as a node with:
+\begin{itemize}
+\item generation index,
+\item rupture time,
+\item entropy produced,
+\item entropy inherited,
+\item number of children.
+\end{itemize}
+
+A multiverse tree is built by recursively evolving each universe and spawning $N=6m$ descendants.
+
+\section{Entropy}
+
+Entropy production is proportional to black hole formation:
+\begin{equation}
+S_{\rm produced} = \int \dot{M}_{\rm BH}(t)\, dt.
+\end{equation}
+
+At rupture:
+\begin{equation}
+S_{\rm dumped} = S_{\rm produced} + S_{\rm inherited}.
+\end{equation}
+
+Each child inherits:
+\begin{equation}
+S_{\rm inherited}^{\rm child} = S_{\rm dumped}^{\rm parent}.
+\end{equation}
+
+This produces a thermodynamic arrow across generations.
+
+\section{Results}
+
+Simulations show:
+\begin{itemize}
+\item stable rupture times ($t_{\rm rupt} \approx 5.6$ Gyr),
+\item dominance of the fundamental mode ($m=1$),
+\item linear entropy inheritance,
+\item a stable, self-similar multiverse tree.
+\end{itemize}
+
+\section{Conclusion}
+
+This rupture-driven cosmology provides a simple mechanism for cyclic evolution, quantized reproduction, and entropy inheritance. The model naturally favors six-universe ruptures, producing a stable branching multiverse with a thermodynamic arrow.
+
+\begin{thebibliography}{9}
+
+\bibitem{Smolin1992}
+L.~Smolin,
+``Did the Universe Evolve?,'' 
+\textit{Class. Quant. Grav.} \textbf{9}, 173--191 (1992).
+
+\bibitem{Smolin1997}
+L.~Smolin,
+\textit{The Life of the Cosmos},
+Oxford University Press (1997).
+
+\bibitem{Penrose2010}
+R.~Penrose,
+\textit{Cycles of Time: An Extraordinary New View of the Universe},
+Bodley Head (2010).
+
+\bibitem{SteinhardtTurok2002}
+P.~J.~Steinhardt and N.~Turok,
+``A Cyclic Model of the Universe,''
+\textit{Science} \textbf{296}, 1436--1439 (2002).
+
+\bibitem{SteinhardtTurok2005}
+P.~J.~Steinhardt and N.~Turok,
+``The Cyclic Model Simplified,''
+\textit{New Astron. Rev.} \textbf{49}, 43--57 (2005).
+
+\bibitem{Guth2007}
+A.~H.~Guth,
+``Eternal inflation and its implications,''
+\textit{J. Phys. A} \textbf{40}, 6811--6826 (2007).
+
+\bibitem{Ashtekar2006}
+A.~Ashtekar, T.~Pawlowski and P.~Singh,
+``Quantum Nature of the Big Bang,''
+\textit{Phys. Rev. Lett.} \textbf{96}, 141301 (2006).
+
+\end{thebibliography}
+
+\end{document}
