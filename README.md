@@ -32,7 +32,8 @@ The repository includes:
 - `paper/main.tex` — full LaTeX source  
 - `paper/main.pdf` — compiled version  
 - `code/` — Python simulation code   
-- `LICENSE` — MIT License  
+- `LICENSE` — MIT License
+- `README.md — Readme
 
 ## Citation
 
