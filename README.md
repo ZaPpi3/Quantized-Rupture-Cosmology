@@ -4,7 +4,7 @@ This repository contains the LaTeX source, simulation code, and supporting
 materials for the paper:
 
 **"A Quantized Rupture Cosmology: Cyclic Dynamics, Multiverse Branching, and Entropy Inheritance"**  
-*Paul Jarvis (Independent Researcher, Much Hadham, UK)*
+*Paul Jarvis (Independent Researcher, UK)*
 
 ## Overview
 
